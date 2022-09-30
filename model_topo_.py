@@ -48,10 +48,9 @@ class RW_GNN(nn.Module):
         n_nodes = adj.shape[0]
 
         if self.normalize:
-            norm = counts.unsqueeze(1).repeat(1, self.n_subgraphs) # 这个batch图的个数 * 隐藏图的个数 （元素：这张图里有多少个点）
+            norm = counts.unsqueeze(1).repeat(1, self.n_subgraphs) 
 
         E = torch.ones((self.n_subgraphs, self.size_subgraphs, n_nodes), device=self.device)
-        # 5*10* 这个batch里一共有多少个点
 
         I = torch.eye(n_nodes, device=self.device)
         adj_power = adj
