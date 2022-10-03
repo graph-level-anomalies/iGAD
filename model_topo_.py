@@ -23,7 +23,6 @@ class RW_GNN(nn.Module):
         self.relu = nn.ReLU()
 
     def init_weights(self):
-        #self.Theta_matrix.data.uniform_(-1, 1)
         nn.init.kaiming_normal_(self.Theta_matrix)
 
     def forward(self, adj, graph_indicator):
