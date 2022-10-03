@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser(description='iGAD')
 parser.add_argument('--dataset', default='MCF-7', help='Dataset name')
 parser.add_argument('--lr', type=float, default=1e-3, help='Initial learning rate')
 parser.add_argument('--batch_size', type=int, default=128, help='Input batch size for training')
-parser.add_argument('--epochs', type=int, default=300, help='Number of epochs to train')
+parser.add_argument('--epochs', type=int, default=200, help='Number of epochs to train')
 
 # feature_part args
 parser.add_argument('--num_layers', type=int, default=2, help='Number of layers in GNN')
